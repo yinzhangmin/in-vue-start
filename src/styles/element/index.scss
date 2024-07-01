@@ -1,0 +1,36 @@
+$--colors: (
+  "primary": (
+    "base": #0052cc
+  ),
+  "success": (
+    "base": #36B37E
+  ),
+  "warning": (
+    "base": #00B8D9
+  ),
+  "danger": (
+    "base": #172B4D
+  ),
+  "error": (
+    "base": #00B8D9
+  ),
+  "info": (
+    "base": #0C66E4
+  )
+);
+
+@forward "element-plus/theme-chalk/src/mixins/config.scss" with (
+  $namespace: "ep"
+);
+
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: $--colors,
+  $button-padding-horizontal: ("default": 50px)
+);
+
+@use "./dark.scss";
+@use "element-plus/theme-chalk/base.css";
+@use "element-plus/theme-chalk/src/notification.scss";
+@use "element-plus/theme-chalk/src/message.scss";
+@use "element-plus/theme-chalk/src/message-box.scss";
+

@@ -1,0 +1,74 @@
+html {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+body,
+#app {
+	height: 100%;
+	width: 100%;
+	min-width: 1280px;
+	padding: 0;
+	margin: 0;
+	font-family: 'HarmonyOSHans-Regular', 'HarmonyOSHans-fallback', 'PingFangSC-Regular', 'Microsoft YaHei', 'Arial', 'Helvetica', sans-serif;
+	background-color: #eee;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-size: 16px;
+}
+
+* {
+	font-size: 16px;
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+	background-color: #eee;
+	border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #d8dfe3;
+	border-radius: 7px;
+}
+
+#nprogress > .bar {
+	display: none;
+}
+
+#nprogress .spinner-icon {
+	border-top-color: #0052cc;
+	border-left-color: #0052cc;
+}
+
+.boder-test {
+	border: 1px solid red;
+}
+
+/* 设置input元素的placeholder字体大小 */
+input::-webkit-input-placeholder { 
+	font-size: 16px; 
+}
+input:-moz-placeholder { 
+	font-size: 16px;
+}
+input::-moz-placeholder {
+	font-size: 16px;
+}
+input:-ms-input-placeholder { 
+	font-size: 16px;
+}
+/* 设置textarea元素的placeholder字体大小 */
+textarea::-webkit-input-placeholder {
+	font-size: 16px;
+}
+textarea:-moz-placeholder { 
+	font-size: 16px;
+}
+textarea::-moz-placeholder { 
+	font-size: 16px;
+}
+textarea:-ms-input-placeholder { 
+	font-size: 16px;
+}
