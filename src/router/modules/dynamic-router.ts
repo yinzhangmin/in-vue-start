@@ -11,13 +11,13 @@ const createRouter = (item: any, router: any) => {
 	const route = {
 		path: item.Url ?? "/",
 		component: () => import('@/views/test1/index.vue'),
-		expanded: false,
 		meta: {
 			icon: "fa-duotone fa-house-chimney-medical",
 			title: item.Name,
 			breadcrumb: true,
 			hidden: false,
-			requiresAuth: true
+			requiresAuth: true,
+			expanded: false
 		},
 		children: item.Children.length > 0 ? (_ => creater(item.Children, router))() : []
 	};

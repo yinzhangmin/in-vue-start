@@ -1,6 +1,21 @@
+.side-container {
+	height: calc(100% - 55px);
+
+	.scrollbar-side {
+		height: 100%;
+
+		.ep-scrollbar__bar {
+			&.is-vertical {
+				width: 10px;
+			}
+		}
+	}
+}
+
 .left-side {
 	min-width: var(--left-side-width);
 	background-color: #304156;
+	color: #bfcbd9;
 	height: 100%;
 	font-size: 0;
 	top: 0;
@@ -12,12 +27,15 @@
 	border-bottom-right-radius: 7px;
 	margin-right: 5px;
 	transition: all 0.2s;
+
 	&.active {
 		min-width: var(--left-side-width-close);
+
 		.logo-wrapper {
 			padding: 0;
 			display: flex;
 			justify-content: center;
+
 			.icon-log {
 				display: flex;
 				width: 30px;
@@ -33,10 +51,11 @@
 
 		.menu-wrapper {
 			.in-nav {
-				> .item {
+				>.item {
 					display: flex;
 					justify-content: center;
-					> .title {
+
+					>.title {
 						.text {
 							display: none;
 						}
@@ -46,6 +65,7 @@
 						}
 					}
 				}
+
 				.sub {
 					display: none;
 				}
@@ -59,9 +79,11 @@
 		line-height: 50px;
 		padding-left: 20px;
 		box-sizing: border-box;
+
 		.icon-log {
 			display: none;
 		}
+
 		.sidebar-logo-link {
 			display: inline-block;
 			width: 100%;
@@ -88,8 +110,8 @@
 
 		.in-nav {
 			box-sizing: border-box;
-			color: #fff;
-			> .item {
+
+			>.item {
 				cursor: pointer;
 				padding: 0px 5px;
 
@@ -101,18 +123,9 @@
 							}
 						}
 					}
-					.sub {
-						.item {
-							.title {
-								// overflow: hidden;
-								// height: 0px;
-								// visibility: hidden;
-							}
-						}
-					}
 				}
 
-				> .title {
+				>.title {
 					line-height: 45px;
 					padding: 0px 5px;
 					display: flex;
@@ -125,11 +138,20 @@
 						border-radius: 7px;
 						color: #fff;
 						box-shadow: 0 4px 14px 0 rgba(0, 82, 204, 0.39);
+
+						.text {
+							color: #fff;
+						}
+
+						.icon {
+							color: #D9007A;
+						}
 					}
 
 					.icon {
 						color: #eee;
 						margin: 0 10px;
+
 						.in-icon {
 							font-size: 18px;
 						}
@@ -139,11 +161,13 @@
 						width: 100%;
 						display: flex;
 						white-space: nowrap;
-						color:#bfcbd9;
+						color: #bfcbd9;
 					}
 
 					.fn {
 						text-align: right;
+						margin-right: 10px;
+
 						i {
 							transform: rotate(180deg);
 						}
@@ -163,15 +187,25 @@
 					.title {
 						line-height: 35px;
 						padding: 0px 25px;
+
 						&:hover {
 							background-color: #0052cc;
 							border-radius: 7px;
-							color: #fff;
+							color: #bfcbd9;
+
+							.text {
+								color: #fff;
+							}
+
+							.icon {
+								color: #D9007A;
+							}
 						}
 
 						.icon {
 							color: #eee;
 							margin: 0 10px;
+
 							.in-icon {
 								font-size: 16px;
 							}

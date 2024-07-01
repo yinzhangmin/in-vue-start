@@ -1,8 +1,8 @@
 <template>
 	<div class="side-container">
-		<el-scrollbar class="scrollbar-side">
+		<el-scrollbar class="scrollbar-side" :always="true">
 			<div class="in-nav">
-				<div class="item" v-for="(item, index) in list" :class="{ expanded: item.expanded }">
+				<div class="item" v-for="(item, index) in list" :class="{ expanded: item.meta.expanded }">
 					<div class="title" @click="resolvePath(item)">
 						<span class="icon">
 							<i :class="item.meta.icon != null ? item.meta.icon : ''"></i>
@@ -13,7 +13,7 @@
 						</span>
 					</div>
 					<el-collapse-transition v-if="item.children != null && item.children.length > 0">
-						<div class="sub" v-if="item.expanded">
+						<div class="sub" v-if="item.meta.expanded">
 							<div class="item" v-for="(sub, index) in item.children">
 								<div class="title" @click="resolvePath(sub)">
 									<span class="icon">
@@ -37,19 +37,10 @@ const list = store.routers;
 
 const resolvePath = (item) => {
 	if (item.children != null && item.children.length > 0) {
-		item.expanded = !item.expanded;
+		item.meta.expanded = !item.meta.expanded;
 	} else {
+		item.meta.active = true;
 		router.push(item.path);
 	}
 };
 </script>
-
-<style lang="scss" scoped>
-.side-container {
-	height: calc(100% - 55px);
-
-	.scrollbar-side {
-		height: 100%;
-	}
-}
-</style>
